@@ -10,11 +10,11 @@ export const MarketingLayout: React.FC = ({ children }) => {
     <VStack alignItems="stretch" paddingTop={8} w="100%" maxW="1200px" marginX="auto">
       <HStack paddingX={4}>
         <GiCrossFlare size="36px" />
-        <Heading>Project X</Heading>
+        <Heading>Preflight</Heading>
         <Spacer />
         <Link href="/app" passHref>
           <Button as="a" size="sm" colorScheme="blue">
-            Go to App
+            Login
           </Button>
         </Link>
       </HStack>

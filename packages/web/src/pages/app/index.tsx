@@ -1,5 +1,6 @@
 import { Heading, FormControl, FormLabel, FormErrorMessage, FormHelperText, Flex, Box, Button, Input, Stack } from '@chakra-ui/react';
 import { NextPage } from 'next';
+import Link from 'next/dist/client/link';
 import React from 'react';
 import { AppLayout } from '../../components/Layout';
 
@@ -9,7 +10,7 @@ const AppHome: NextPage = () => {
       
 
       <FormControl id="username" >
-      <Flex width="full" align="center" justifyContent="center">
+      <Flex minHeight="75vh" width="full" align="center" justifyContent="center">
       <Box p={2}>
         <Box textAlign="center">
           <Heading>Login</Heading>
@@ -18,9 +19,9 @@ const AppHome: NextPage = () => {
           <form>
             <FormControl isRequired>
               <FormLabel>Email</FormLabel>
-              <Input type="email" placeholder="youremail@edu.com" />
+              <Input type="email" placeholder="email@school.edu" />
             </FormControl>
-            <FormControl isRequired mt={6}>
+            <FormControl isRequired mt={2}>
               <FormLabel>Password</FormLabel>
               <Input type="password" placeholder="*******" />
             </FormControl>
@@ -29,10 +30,11 @@ const AppHome: NextPage = () => {
               <Button width="full" type="submit">
                 Sign In
               </Button>
-
-              <Button width="full" type="submit">
-                Sign Up
-              </Button>
+              <Link href="app/signup" passHref>
+                <Button as="a" width="full">
+                  Sign Up
+                </Button>
+              </Link>
             </Stack>
 
             <Button mt ={4} width="full"  type="submit" >
