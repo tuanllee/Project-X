@@ -37,9 +37,11 @@ const AppHome: NextPage = () => {
               </Link>
             </Stack>
 
-            <Button mt ={4} width="full"  type="submit" >
+            
+            <Button as="a" mt ={4} width="full" href="https://github.com/login" target="_blank">
               Sign in with Github
             </Button>
+     
           </form>
         </Box>
       </Box>
